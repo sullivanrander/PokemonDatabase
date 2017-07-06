@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Carbon\Carbon;
 
 class PokemonTableSeeder extends Seeder {
 	/**
@@ -36,7 +37,7 @@ class PokemonTableSeeder extends Seeder {
 		$pokemonSpeed      = null;
 		$pokemonHeight     = null;
 		$pokemonCounter    = 1;
-		$pokemonQuantity   = 718;
+		$pokemonQuantity   = 10; //Max 718
 
 		while ( $pokemonCounter <= $pokemonQuantity ) {
 			$pokeGET2 = ( 'http://pokeapi.co/api/v1/pokemon/' . $pokemonCounter . '/' );
@@ -68,22 +69,16 @@ class PokemonTableSeeder extends Seeder {
 			$pokemonSpeed   = $pokeConvert['speed'];
 			$pokemonHeight  = $pokeConvert['height'];
 
+			$timestamps = Carbon::now()->format('Y-m-d H:i:s');
+
 			DB::table( 'pokemon' )->insert( [
-				'name'      => $pokemonName,
-				'type'      => $pokemonType,
-				'type2'     => $pokemonType2,
-				'height'    => $pokemonHeight,
-				'weight'    => $pokemonWeight,
-				'ability1'  => $pokemonAbility,
-				'ability2'  => $pokemonAbility22,
-				'ability3'  => $pokemonAbility33,
-				'ability4'  => $pokemonAbility44,
-				'hp'        => $pokemonHP,
-				'attack'    => $pokemonAttack,
-				'defense'   => $pokemonDefense,
-				'spattack'  => $pokemonSpA,
-				'spdefense' => $pokemonSpD,
-				'speed'     => $pokemonSpeed,
+				'nome'      => $pokemonName,
+				'tipo'      => $pokemonType,
+				'ataque'     => $pokemonAttack,
+				'defesa'    => $pokemonDefense,
+				'agilidade'    => $pokemonSpeed,
+				'created_at'    => $timestamps,
+				'updated_at'    => $timestamps,
 			] );
 
 			//Used in while look and requests.

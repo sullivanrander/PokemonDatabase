@@ -1,0 +1,286 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Pokemon",
+		"_postman_id": "78c2f2e5-b2f6-f26e-5c15-df0a9d0b5c83",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro de usuário",
+			"request": {
+				"url": "localhost:8000/api/v1/cadastro",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Usuário",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "usuario@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login de usuário",
+			"request": {
+				"url": "localhost:8000/api/v1/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "usuario@email.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "senha",
+							"value": "123456",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Retornar todos os pokemons",
+			"request": {
+				"url": "localhost:8000/api/v1/pokemons",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Go9iAzsvOqtSxnBw99i4eozZLZXQ4zZBFK3IUoQS2Yuia3oguq4dXbHKEXTj",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Listar um pokemon específico",
+			"request": {
+				"url": "localhost:8000/api/v1/pokemon/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Go9iAzsvOqtSxnBw99i4eozZLZXQ4zZBFK3IUoQS2Yuia3oguq4dXbHKEXTj",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Criar novo pokemon",
+			"request": {
+				"url": "localhost:8000/api/v1/pokemon/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Go9iAzsvOqtSxnBw99i4eozZLZXQ4zZBFK3IUoQS2Yuia3oguq4dXbHKEXTj",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Pokemon Nome",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "grama",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ataque",
+							"value": "40",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "defesa",
+							"value": "30",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agilidade",
+							"value": "100",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar um pokemon específico",
+			"request": {
+				"url": "localhost:8000/api/v1/pokemon/11",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Go9iAzsvOqtSxnBw99i4eozZLZXQ4zZBFK3IUoQS2Yuia3oguq4dXbHKEXTj",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nome",
+							"value": "Pokemon Outro Nome",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "aquático",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "ataque",
+							"value": "50",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "defesa",
+							"value": "80",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "agilidade",
+							"value": "120",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta um pokemon específico",
+			"request": {
+				"url": "localhost:8000/api/v1/pokemon/11",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Go9iAzsvOqtSxnBw99i4eozZLZXQ4zZBFK3IUoQS2Yuia3oguq4dXbHKEXTj",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
